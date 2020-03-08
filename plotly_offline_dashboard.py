@@ -2,7 +2,7 @@ import plotly
 
 fig = {
     "data": [{"x": [1, 2, 3], "y": [2, 5, 3], "type": "bar"}],
-    "layout": {"width": 450, "height": 450},
+    "layout": {"width": 450, "height": 350, 'margin': {'l': 50, 'r': 50, 't': 50, 'b': 50}}
 }
 
 graph_1 = plotly.offline.plot(
@@ -25,6 +25,7 @@ html_string = (
     """
 <!DOCTYPE html>
 <html lang="en">
+<body style="background-color:#fafbfe;">
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -38,7 +39,7 @@ html_string = (
     
     /* Set gray background color and 100% height */
     .sidenav {
-      background-color: #f1f1f1;
+      background-color: #fafbfe;
       height: 100%;
     }
         
@@ -46,6 +47,21 @@ html_string = (
     @media screen and (max-width: 767px) {
       .row.content {height: auto;} 
     }
+
+    /* Set white background color for the cards */
+    .well {
+    background-color: white;
+    }
+
+    /* Nav colors */
+    .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background-color: #636EFA;
+    }
+
+    .nav>li>a {
+    color: #636EFA;
+    }
+
   </style>
 </head>
 <body>
@@ -86,11 +102,11 @@ html_string = (
     
     <div class="col-sm-10">
       <div class="well">
-        <h4>Dashboard</h4>
+        <h2 style="color:#636EFA">Dashboard</h2>
         <p>Some text..</p>
       </div>
       <div class="row">
-        <div class="col-sm-6">
+<div class="col-sm-6">
           <div class="well">
             <h4>Pages</h4>
             <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -155,7 +171,6 @@ html_string = (
     </div>
   </div>
 </div>
-
 </body>
 </html>
 """
