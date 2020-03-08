@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<body style="background-color:#fafbfe;">
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -13,7 +14,7 @@
     
     /* Set gray background color and 100% height */
     .sidenav {
-      background-color: #f1f1f1;
+      background-color: #fafbfe;
       height: 100%;
     }
         
@@ -21,6 +22,21 @@
     @media screen and (max-width: 767px) {
       .row.content {height: auto;} 
     }
+
+    /* Set white background color for the cards */
+    .well {
+    background-color: white;
+    }
+
+    /* Nav colors */
+    .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background-color: #636EFA;
+    }
+
+    .nav>li>a {
+    color: #636EFA;
+    }
+
   </style>
 </head>
 <body>
@@ -61,7 +77,7 @@
     
     <div class="col-sm-10">
       <div class="well">
-        <h4>Dashboard</h4>
+        <h2 style="color:#636EFA">Dashboard</h2>
         <p>Some text..</p>
       </div>
       <div class="row">
